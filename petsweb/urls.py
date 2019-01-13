@@ -10,4 +10,5 @@ urlpatterns = [
     #path('listado-mascotas', TemplateView.as_view(template_name="pets web/ListadoM.html"), name= "listado-mascotas"),
     path('admin/', admin.site.urls),
     path('mascotas', include("apps.mascota.urls"), name = "listado-mascotas"),
+    path('registro/', include('apps.usuario.urls'), name = "registrarAdoptante"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

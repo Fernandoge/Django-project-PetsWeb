@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.mascota',
     'apps.tablas_basicas',
+    'apps.usuario',
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'petsweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'petsweb',
+        'NAME': 'petswebdata',
         'USER': 'pancho',
         'PASSWORD': 'pancho',
         'HOST': 'localhost',
