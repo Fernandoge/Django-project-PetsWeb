@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'apps.mascota',
     'apps.tablas_basicas',
     'apps.usuario',
+    'apps.solicitud',
 ]
 
 MIDDLEWARE = [

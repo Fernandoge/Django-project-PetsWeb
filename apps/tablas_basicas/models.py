@@ -27,3 +27,10 @@ class Desparasitacion(models.Model):
 
     def __str__(self):
         return '{}'.format(self.nombre)
+
+"""Estado de las solicitudes"""
+class Estado(models.Model):
+    nombre = models.CharField(max_length = 50)
+
+    def __str__(self):
+        return '{}'.format(self.nombre)

@@ -9,3 +9,6 @@ class Mascota(models.Model):
     genero = models.ForeignKey(Genero, on_delete = models.CASCADE)
     vacuna = models.ManyToManyField(Vacuna, blank = True)
     desparasitacion = models.ForeignKey(Desparasitacion, on_delete = models.CASCADE)
+
+    def __str__(self):
+        return '{}'.format(self.nombre)
