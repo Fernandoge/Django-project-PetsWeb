@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from django.urls import reverse_lazy
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -79,7 +80,7 @@ WSGI_APPLICATION = 'petsweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'petswebdata',
+        'NAME': 'petswebdata3',
         'USER': 'pancho',
         'PASSWORD': 'pancho',
         'HOST': 'localhost',
@@ -132,3 +133,7 @@ STATICFILES_DIRS = ( os.path.join('static'), )
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTH_USER_MODEL = 'usuario.User'
+
+LOGIN_REDIRECT_URL = 'mascota/'

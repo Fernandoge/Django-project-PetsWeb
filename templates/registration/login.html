@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method = 'post'>
+        {% csrf_token %}
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group"
+                    <label for="run">RUN:</label>
+                    <input class="form-control" type = "text" name = "run">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group"
+                    <label for="password">Pass:</label>
+                    <input class="form-control" type = "text" name = "password">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <button class="btn btn-primary "type = "submit">Ingresar</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>

@@ -8,8 +8,85 @@
 
     <form method = 'post'>
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Guardar</button>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>RUN</label>
+                    <input class="form-control" type = "text" name = "run">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Nombre</label>
+                    <input class="form-control" type = "text" name = "first_name">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Apellidos</label>
+                    <input class="form-control" type = "text" name = "last_name">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input class="form-control" type = "text" name = "email">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Edad</label>
+                    <input class="form-control" type = "text" name = "edad">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Fono</label>
+                    <input class="form-control" type = "text" name = "fono">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Direccion</label>
+                    <input class="form-control" type = "text" name = "direccion">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input class="form-control" type = "text" name = "password1">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <label>Confirmar Contraseña:</label>
+                    <input class="form-control" type = "text" name = "password2">
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="form-group">
+                    <button class="btn btn-primary "type = "submit">Ingresar</button>
+                </div>
+            </div>
+        </div>
     </form>
 
 </body>

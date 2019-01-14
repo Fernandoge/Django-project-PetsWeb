@@ -1,4 +1,4 @@
-from django.contrib.auth.models import User
+from .models import User
 from django.contrib.auth.forms import UserCreationForm
 
 class RegistroForm(UserCreationForm):
@@ -6,16 +6,23 @@ class RegistroForm(UserCreationForm):
     class Meta:
         model = User
         fields = [
-                'username',
+                'run',
                 'first_name',
                 'last_name',
                 'email',
+                'edad',
+                'fono',
+                'direccion',
+
         ]
 
         labels = {
-                'username': 'Nombre de usuario',
+                'run': 'RUN',
                 'first_name': 'Nombre',
                 'last_name': 'Apellidos',
                 'email': 'Correo',
+                'edad': 'Edad',
+                'fono': 'Fono',
+                'direccion': 'Direccion',
 
         }
