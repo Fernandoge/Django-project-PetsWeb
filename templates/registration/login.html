@@ -1,29 +1,54 @@
 <!DOCTYPE html>
-<html lang = "en">
+{% load static %}
+<html>
 <head>
-    <meta charset = "UTF-8">
-    <title>Document</title>
+<style>
+.aligncenter {
+    text-align: center;
+}
+</style>
+<p class="aligncenter">
+    <img src="{% static 'img/logo.png' %}" alt="centered image", width=200, height=100 />
+</p>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
+<style>
+        .aligncenter {
+            text-align: center;
+        }
+</style>       
+<div class="jumbotron vertical-center">
+ <div class="container text-center">
+        <form method="post">  {% csrf_token %}
+        <div class='panel panel-default'>   
+            <div class='panel-heading'> Login </div>
+                <div class= 'panel-body'>
+                    <div class="wrap"> 
+                    <form method="post">
+                        <div class="form-group">
+                        <div>
+                            <p class="aligncenter">
+                            {{ form.username.label_tag }}
+                            {{ form.username }}
+                       
+                           {{ form.password.label_tag }}
+                           {{ form.password }}
+                            </p>
+                  
+                        </div>
+                        <div>
+                                <input type="submit" value="Ingresar" />
+                                <input type="hidden" name="next" value="{{ next }}" />
+                        </div>
+                    </div>    
+                    </form>
+                    {{form.errors}}
+                </div>    
+        </div>
+    </div>  
+</div>    
 
-    <form method = 'post'>
-        {% csrf_token %}
-            <div>
-                <td>{{ form.username.label_tag }}</td>
-                <td>{{ form.username }}</td>
-            </div>
-            <div>
-                <td>{{ form.password.label_tag }}</td>
-                <td>{{ form.password }}</td>
-            </div>
-
-            <div>
-                <input type="submit" value="login" />
-                <input type="hidden" name="next" value="{{ next }}" />
-            </div>
-    </form>
-
-     {{form.errors}}
 
 </body>
 </html>

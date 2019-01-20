@@ -14,5 +14,6 @@ urlpatterns = [
     path('mascotas', include("apps.mascota.urls"), name = "listado-mascotas"),
     path('registro/', include('apps.usuario.urls'), name = "registrarAdoptante"),
     path('login/', auth_views.LoginView.as_view(), name = "login"),
+    path('logout/', auth_views.LogoutView.as_view(next_page='listado-mascotas'), name="logout"),
     path('solicitudes/<mascotaid>',include('apps.solicitud.urls'), name = "crearSolicitud"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

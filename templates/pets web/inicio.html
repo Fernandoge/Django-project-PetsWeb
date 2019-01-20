@@ -26,7 +26,13 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
                 {% if user.is_authenticated %}
-                  <p>Bienvenido, {{ user.get_full_name }}</p>
+                  <p>Bienvenido, {{ user.get_full_name }}
+                  <ul class="navbar-nav"> <!-- add here -->
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">Cerrar sesión</a> 
+            </li>
+            </p>
+        </ul> <!-- to here -->
                 {% else %}
                   <a class="page-link" href="{% url 'login' %}">Iniciar sesion</a>
                 {% endif %}
