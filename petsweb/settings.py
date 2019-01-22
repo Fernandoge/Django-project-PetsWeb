@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'petsweb.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'petsweb2',
+        'NAME': 'petsweb',
         'USER': 'pancho',
         'PASSWORD': 'pancho',
         'HOST': 'localhost',
@@ -137,4 +137,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 AUTH_USER_MODEL = 'usuario.User'
 
-LOGIN_REDIRECT_URL = reverse_lazy('listado-mascotas')
+LOGIN_REDIRECT_URL = reverse_lazy('inicio')

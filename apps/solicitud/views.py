@@ -10,6 +10,6 @@ class CrearSolicitud:
 
     def crear(request, mascotaid):
         Solicitud.objects.create(adoptante = User.objects.get(run = request.user.get_username()), mascota = Mascota.objects.get(id = mascotaid), estado = Estado.objects.get(nombre = 'Pendiente'))
-        html = "<html><body>Su solicitud fue creada! </body></html>" 
+        html = "<html><body>Su solicitud fue creada! {}</body></html>".format(mascotaid) 
         return HttpResponse(html)
         
