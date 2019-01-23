@@ -6,7 +6,7 @@ from django.template import RequestContext, loader
 from django.db.models import Q
 
 
-#class Inicio(ListView):	
+#class ListaMascotas(ListView):	
 #	model = Mascota
 #	template_name = 'pets web/inicio.html'
 #	paginate_by = 3	

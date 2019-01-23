@@ -10,4 +10,4 @@ class RegistroUsuario(CreateView):
     model = User
     template_name = 'pets web/registrar.html'
     form_class = RegistroForm
-    success_url = reverse_lazy('listado-mascotas')
+    success_url = reverse_lazy('inicio')

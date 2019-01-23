@@ -52,7 +52,7 @@
           <div class="list-group">
           
     
-           <button type="button" class="btn btn-link", onClick="window.location = 'https://www.facebook.com/CazuelaWave/';"><img src="{% static 'img/champion2.jpg' %}" alt="x",width=300, height=260 /></button>
+           <button type="button" class="btn btn-link", onClick="window.location = 'https://www.championcat.cl/';"><img src="{% static 'img/champion2.jpg' %}" alt="x",width=300, height=260 /></button>
 
 
             </li>
@@ -78,9 +78,9 @@
                       <p >Desparasitación: {{ solicitud.mascota.desparasitacion }}</p>
                       {% endif %}
                       {% if user.is_authenticated %}
-                        <a class="page-link" href="{% url 'crearSolicitud'  mascotaid=solicitud.mascota.id %}">Adoptar</a>
+                          <a class="page-link" href="{% url 'crearSolicitud'  mascotaid=mascota.id %}">Adoptar</a>
                       {% else %}
-                        <a class="page-link" href="{% url  'login' %}">Adoptar</a>
+                          <a class="page-link" href="{% url  'login' %}">Adoptar</a>
                       {% endif %}
                   </h4>
                   <p class="card-text"></p>
@@ -155,8 +155,8 @@
 
            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
            <input type="hidden" name="cmd" value="_s-xclick" />
-           <input type="hidden" name="hosted_button_id" value="8QP5ZCX3KJACE" />
-           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Donando estarás ayudando a los animalitos!" alt="Donate with PayPal button" />
+           <input type="hidden" name="hosted_button_id" value="6ZTA56WUSD42J" />
+           <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
            <img alt="" border="0" src="https://www.paypal.com/en_CL/i/scr/pixel.gif" width="1" height="1" />
            </form>
          </ul>
